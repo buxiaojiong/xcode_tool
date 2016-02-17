@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        //2 NSDate 日期类
+        NSDate *now = [NSDate date];
+        NSLog(@"%@",now);
+        
+        //NSDateFormatter 日期格式类
+        //NSDate -&gt; NSString
+        NSDateFormatter *df=[[NSDateFormatter alloc] init];
+        //1)系统提供的一些格式
+        [df setDateStyle:NSDateFormatterShortStyle];
+        [df setTimeStyle:NSDateFormatterLongStyle];
+        NSLog(@"%@",[df stringFromDate:now]);
+        //2)自定义的格式
+        [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+        NSLog(@"%@",[df stringFromDate:now]);
+        //NSString -&gt; NSDate
+        NSDate *bDate =[df dateFromString:@"1999-09-01 06:30:30"];
+        NSLog(@"%@",bDate);
+        
+        //一些用法
+        NSDate *tomorrow = [NSDate dateWithTimeIntervalSinceNow:24*60*60];
+        NSDate *yesterday = [NSDate dateWithTimeIntervalSinceNow:-24*60*60];
+        NSDate *date3 = [NSDate dateWithTimeInterval:8*60*60 sinceDate:now];
+        
+        //日期的比较
+        if([now isEqualToDate:tomorrow])
+        {
+            NSLog(@"两个时间一样");
+        }
+        else if([now earlierDate:tomorrow])
+        {
+            NSLog(@"前者早于后者");
+        }
+        else if([now laterDate:tomorrow])
+        {
+            NSLog(@"前者晚于后者");
+        }
+        
+        //时间的间隔
+        NSDate *d1=[NSDate date];
+        for(int i=0;i&lt;1000;i++)
+        {
+            NSLog(@"%i",i);
+        }
+        NSDate *d2=[NSDate date];
+        NSTimeInterval s=[d2 timeIntervalSinceDate:d1];
+        NSLog(@"运行时间%g秒",s);
+        
+        NSTimeInterval s2 = [d2 timeIntervalSince1970];
+        NSLog(@"现在距离1970年间隔%f秒",s2);</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>52752599-AD06-407B-A3C9-9EECF2DCE3C0</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>日期类</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

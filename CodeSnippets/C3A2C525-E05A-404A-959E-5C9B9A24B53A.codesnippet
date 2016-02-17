@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        //1 NSValue 可以将任何数据类型封装成对象
+        //a)封装
+        //+ (NSValue *)valueWithBytes:(const void *)value objCType:(const char *)type;
+        //b)提取
+        //- (void)getValue:(void *)value;
+        //        Rectangle a,b;
+        //        a.x=100;a.y=100;a.width = 300;a.height = 50;
+        //        b.x=50;b.y=80;b.width=250;b.height;
+        //        //1)封装 将结构体变量 封装 成对象
+        //        NSValue *v1 = [NSValue valueWithBytes:&amp;a objCType:@encode(Rectangle)];
+        //        NSValue *v2 = [NSValue valueWithBytes:&amp;b objCType:@encode(Rectangle)];
+        //        NSArray *arr=@[v1,v2];
+        //        for(NSValue *v in arr)
+        //        {
+        //            Rectangle r;
+        //            [v getValue:&amp;r];//2提取 NSValue-&gt; Rectangle
+        //            NSLog(@"%i,%i,%i,%i",r.x,r.y,r.width,r.height);
+        //        }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>87B931CB-3E9A-4DA9-9192-8C0ABF75F31A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>关于 NSValue</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

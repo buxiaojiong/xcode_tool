@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//全局队列
+//#define DISPATCH_QUEUE_PRIORITY_HIGH 2       高优先级队列
+//#define DISPATCH_QUEUE_PRIORITY_DEFAULT 0    普通队列
+//#define DISPATCH_QUEUE_PRIORITY_LOW (-2)     低优先级队列
+//dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//    //自定义队列
+//    dispatch_queue_t queue2 = dispatch_queue_create("myQueue", NULL);
+
+//dispatch_async 将要做的任务放入队列
+//    dispatch_async(队列里, 任务block)
+//dispatch_async(queue, ^{
+//    //代码段1 费时间的操作:比如下载、复杂的计算
+//    dispatch_async(dispatch_get_main_queue(),
+//                   ^{
+//                       //代码2 回到主线程做的操作 比如更新UI界面
+//                   });
+//});</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2E911193-92C5-4F18-88D7-20D3DB3A05DB</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>使用GCD</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

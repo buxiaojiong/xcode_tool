@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    // 计算self.yellow在self.blue中的位置和尺寸
+//    CGRect newRect = [self.yellow convertRect:self.yellow.bounds toView:self.blue];
+    
+    
+    // 计算self.yellow在self.purple中的位置和尺寸
+//    CGRect newRect = [self.yellow.superview convertRect:self.yellow.frame toView:self.purple];
+    
+    // 计算self.red在self.yellow中的位置和尺寸
+    //    CGRect newRect = [self.red convertRect:self.red.bounds toView:self.yellow];
+    // 计算self.red在self.yellow中的位置和尺寸
+//    CGRect newRect = [self.yellow convertRect:self.red.bounds fromView:self.red];
+    
+    // 计算self.red在屏幕中的位置和尺寸(nil代表屏幕)
+    //CGRect newRect = [self.red convertRect:self.red.bounds toView:nil];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F95013C5-93CC-4AEB-893D-EFE8381CC914</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>坐标系转换</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

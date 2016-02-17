@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    VolumeViewController *voVC = [[VolumeViewController alloc] init];
+    voVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"体积" image:[UIImage imageNamed:@"Volume.png"] tag:1];
+    AreaViewController *arVC = [[AreaViewController alloc] init];
+    arVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"面积" image:[UIImage imageNamed:@"Area.png"] tag:1];
+    SummaryViewController *sumVC = [[SummaryViewController alloc] init];
+    sumVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"统计" image:[UIImage imageNamed:@"Summary.png"] tag:1];
+    
+    //创建标签栏控制器
+    UITabBarController *tabController = [[UITabBarController alloc] init];
+    tabController.viewControllers = @[voVC,arVC,sumVC];
+    self.window.rootViewController = tabController;</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>45684528-0146-4438-8F32-A6EFF9EE6133</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>代码创建标签栏控制器</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

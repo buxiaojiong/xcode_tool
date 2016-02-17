@@ -2,24 +2,29 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>tq_notification_call_back</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (void)&lt;#funcName#&gt;:(NSNotification*)notification {
-    
-}</string>
+	<string>NSURL *fileURL=[[NSBundle mainBundle] URLForResource:@"AlertChordStroke" withExtension:@"wav"];
+
+//1 创建系统声音
+AudioServicesCreateSystemSoundID((__bridge CFURLRef)(fileURL), &amp;soundID);
+
+//2 播放系统声音
+AudioServicesPlaySystemSound(soundID);
+
+//震动是 播放一个特殊的系统声音ID
+AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>BBB93C20-EE5A-44F5-B35D-854A96E88F2D</string>
+	<string>5571ADBB-74AB-4B24-97D7-D984D76F218D</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>tq notification call back method</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>tq notification call back method</string>
+	<string>注册声音</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
